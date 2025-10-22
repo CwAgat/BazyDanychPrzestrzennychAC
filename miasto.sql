@@ -77,7 +77,7 @@ CROSS JOIN points p
 WHERE b.name LIKE 'BuildingC' AND p.name LIKE 'K'
 
 -- 6f) pole powierzchni budynku C znajdującej się dalej niż 0.5 od budynku B
-SELECT ST_Area(ST_AsText(ST_Difference(b1.geometry, ST_Buffer(b2.geometry, 0.5))))
+SELECT ST_Area(ST_Difference(b1.geometry, ST_Buffer(b2.geometry, 0.5)))
 FROM buildings b1
 cross join buildings b2
 where b1.name like 'BuildingC' and b2.name like 'BuildingB'
@@ -102,3 +102,4 @@ WHERE b.name like 'BuildingC';
 SELECT ST_Area(ST_SymDifference(b.geometry, ST_GeomFromText('POLYGON((4 7, 6 7, 6 8, 4 8, 4 7))',0)))
 FROM buildings b
 WHERE b.name like 'BuildingC';
+
