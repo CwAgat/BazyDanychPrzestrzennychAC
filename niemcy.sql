@@ -103,7 +103,7 @@ SET geom = ST_Transform(geom, 3068);
 --z punktów w tabeli ‘input_points’. Wykorzystaj tabelę T2019_STREET_NODE. Dokonaj
 --reprojekcji geometrii, aby była zgodna z resztą tabel.
 
-SELECT ST_SRID(geom_3068) FROM street_node2019 LIMIT 1;
+--SELECT ST_SRID(geom_3068) FROM street_node2019 LIMIT 1;
 
 ALTER TABLE street_node2019
 ADD COLUMN geom_3068 geometry(POINT, 3068);
@@ -151,3 +151,4 @@ FROM railways2019 r
 JOIN water_lines2019 w
   ON ST_Intersects(r.geom, w.geom)
 WHERE ST_GeometryType(ST_Intersection(r.geom, w.geom)) = 'ST_Point';
+
