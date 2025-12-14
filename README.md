@@ -1,2 +1,2 @@
-#BazyDanychPrzestrzennychAC
+## BazyDanychPrzestrzennychAC
 Niestety przeceniłam trochę swoje możliwości, jeżeli chodzi o tempo ukończenia tego projektu, stąd dość spore opóźnienie, za które przepraszam. Chciałam jednak zrobić go rzetelnie i mimo wielu problemów technicznych, wynikających głównie z rozmiaru danych, niewspółpracującej przez pewnien czas strony Copernicus Browser, udało mi się go ukończyć, a przy okazji sporo się nauczyć.
